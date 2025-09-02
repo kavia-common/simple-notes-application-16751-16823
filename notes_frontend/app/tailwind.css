@@ -2,11 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Theme variables */
+:root {
+  --color-primary: #2d7ff9;
+  --color-secondary: #f5f6fa;
+  --color-accent: #ffcb05;
+}
+
 html,
 body {
-  @apply bg-white dark:bg-gray-950;
+  @apply bg-[var(--color-secondary)];
+}
 
-  @media (prefers-color-scheme: dark) {
-    color-scheme: dark;
-  }
+a {
+  @apply text-primary;
+}
+
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  @apply outline-none ring-accent/40 ring-4;
 }
